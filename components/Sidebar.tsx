@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
-  VscAccount,
   VscSettings,
   VscMail,
   VscGithubAlt,
@@ -15,13 +14,12 @@ import styles from '@/styles/Sidebar.module.css';
 const sidebarTopItems = [
   { Icon: VscFiles, path: '/' },
   { Icon: VscGithubAlt, path: '/github' },
-  { Icon: VscCode, path: '/projects' },
+  { Icon: VscCode, path: '/publications' },
   { Icon: VscEdit, path: '/articles' },
   { Icon: VscMail, path: '/contact' },
 ];
 
 const sidebarBottomItems = [
-  { Icon: VscAccount, path: '/about' },
   { Icon: VscSettings, path: '/settings' },
 ];
 

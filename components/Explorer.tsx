@@ -12,11 +12,6 @@ const explorerItems = [
     icon: '/logos/react_icon.svg',
   },
   {
-    name: 'about.html',
-    path: '/about',
-    icon: '/logos/html_icon.svg',
-  },
-  {
     name: 'cv.yml',
     path: '/cv',
     icon: '/logos/json_icon.svg',
@@ -27,9 +22,9 @@ const explorerItems = [
     icon: '/logos/css_icon.svg',
   },
   {
-    name: 'projects.js',
-    path: '/projects',
-    icon: '/logos/js_icon.svg',
+    name: 'publications.json',
+    path: '/publications',
+    icon: '/logos/json_icon.svg',
   },
   {
     name: 'articles.json',
