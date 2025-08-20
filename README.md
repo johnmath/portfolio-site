@@ -5,8 +5,52 @@ A Visual Studio Code themed developer portfolio website built with Next.js and d
 
 ![vscode-portfolio banner](https://imgur.com/JXJ9mpO.gif)
 
+## Features
+
+- 🏠 **About Page as Landing Page**: Clean introduction with professional bio
+- 📚 **Publications**: Automatically synced from Google Scholar with manual override support
+- 📝 **Articles**: Integration with dev.to articles
+- 💼 **CV/Resume**: Professional experience and education
+- 🐙 **GitHub**: Repository showcase
+- 📧 **Contact**: Contact information and links
+- 🎨 **Multiple Themes**: GitHub Dark, Dracula, Ayu, Nord
+- 📱 **Responsive Design**: Works on all devices
+
+## Publications System
+
+The publications page automatically fetches your research publications from Google Scholar and supports manual overrides for adding custom links and descriptions.
+
+### Google Scholar Setup
+
+1. Update the `SCHOLAR_ID` in `scripts/fetch_scholar.py` with your Google Scholar ID
+2. Install Python dependencies: `pip install -r requirements.txt`
+3. Run the fetch script: `npm run fetch-publications`
+
+### Manual Overrides
+
+Edit `data/publications_overrides.yml` to add custom PDF links, videos, code repositories, or descriptions:
+
+```yaml
+your-paper-slug:
+  pdf_url: "https://example.com/your-paper.pdf"
+  video_url: "https://youtube.com/watch?v=your-talk"
+  code_url: "https://github.com/you/your-repo"
+  custom_description: "Custom description override"
+  featured: true
+```
+
+### Build Integration
+
+Publications are automatically fetched during the build process. For builds without fetching (e.g., if the service is unavailable), use:
+
+```bash
+npm run build:skip-fetch
+```
+
 ## Features Roadmap
 
+- [x] Publications with Google Scholar integration
+- [x] About page as landing page  
 - [ ] Themes and customizations
   - [x] GitHub Dark (default)
   - [ ] One Dark Pro

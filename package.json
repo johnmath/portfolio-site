@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run fetch-publications && next build",
+    "build:skip-fetch": "next build",
     "start": "next start",
     "export": "next build",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fetch-publications": "python3 scripts/fetch_scholar.py && python3 scripts/merge_publications.py"
   },
   "dependencies": {
     "next": "^15.2.3",

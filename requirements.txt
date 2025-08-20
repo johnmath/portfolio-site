@@ -1,0 +1,12 @@
+# Requirements for Google Scholar publication fetching
+# Run: pip install -r requirements.txt
+
+# Primary dependency for Google Scholar scraping
+scholarly>=1.7.11
+
+# Fallback dependencies for basic web scraping
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+
+# YAML parsing for manual overrides
+PyYAML>=6.0

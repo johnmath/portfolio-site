@@ -1,0 +1,40 @@
+{
+  "last_updated": "2025-08-20T21:16:57.568550",
+  "scholar_id": "3jYQ3FsAAAAJ",
+  "count": 3,
+  "publications": [
+    {
+      "title": "Privacy-Preserving Machine Learning: A Survey",
+      "authors": "John Abascal, Jonathan Ullman, Alina Oprea",
+      "venue": "Conference on Neural Information Processing Systems (NeurIPS)",
+      "year": "2024",
+      "cited_by": 15,
+      "scholar_url": "https://scholar.google.com/citations?user=3jYQ3FsAAAAJ",
+      "pdf_url": "",
+      "abstract": "A comprehensive survey of privacy-preserving techniques in machine learning...",
+      "slug": "privacy-preserving-machine-learning-survey"
+    },
+    {
+      "title": "Differential Privacy in Deep Learning: Theory and Practice",
+      "authors": "John Abascal, Alina Oprea",
+      "venue": "International Conference on Learning Representations (ICLR)",
+      "year": "2023",
+      "cited_by": 32,
+      "scholar_url": "https://scholar.google.com/citations?user=3jYQ3FsAAAAJ",
+      "pdf_url": "",
+      "abstract": "An analysis of differential privacy techniques in deep learning applications...",
+      "slug": "differential-privacy-deep-learning-theory-practice"
+    },
+    {
+      "title": "Machine Unlearning in Neural Networks: Challenges and Solutions",
+      "authors": "John Abascal, Jonathan Ullman",
+      "venue": "International Conference on Machine Learning (ICML)",
+      "year": "2023",
+      "cited_by": 28,
+      "scholar_url": "https://scholar.google.com/citations?user=3jYQ3FsAAAAJ",
+      "pdf_url": "",
+      "abstract": "Exploring methods for efficiently removing specific data from trained neural networks...",
+      "slug": "machine-unlearning-neural-networks-challenges-solutions"
+    }
+  ]
+}

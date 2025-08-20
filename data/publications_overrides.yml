@@ -1,0 +1,32 @@
+# Manual overrides for publications
+# Key: publication slug (generated from title)
+# Each entry can override or add fields to the auto-generated data
+
+privacy-preserving-machine-learning-survey:
+  pdf_url: "https://example.com/papers/privacy-ml-survey.pdf"
+  video_url: "https://www.youtube.com/watch?v=example1"
+  code_url: "https://github.com/johnabascal/privacy-ml-survey"
+  featured: true
+  custom_description: "A comprehensive survey presented at NeurIPS 2024"
+
+differential-privacy-deep-learning-theory-practice:
+  pdf_url: "https://arxiv.org/pdf/example.pdf" 
+  video_url: "https://www.youtube.com/watch?v=example2"
+  featured: true
+
+machine-unlearning-neural-networks-challenges-solutions:
+  pdf_url: "https://proceedings.mlr.press/example.pdf"
+  code_url: "https://github.com/johnabascal/machine-unlearning"
+
+# Example of a manual publication (not in Scholar)
+# custom-publication-example:
+#   title: "Custom Publication Title"
+#   authors: "John Abascal, Co-Author"
+#   venue: "Workshop on Privacy in ML"
+#   year: "2024"
+#   pdf_url: "https://example.com/paper.pdf"
+#   video_url: "https://example.com/talk"
+#   code_url: "https://github.com/example/repo"
+#   custom_description: "This paper was presented at a workshop"
+#   manual_entry: true
+#   custom_order: 1  # Higher numbers appear first
