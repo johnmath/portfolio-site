@@ -18,6 +18,8 @@ const Tabsbar = () => {
         filename="github.md"
         path="/github"
       />
+      <Tab icon="/logos/md_icon.svg" filename="papers.md" path="/papers" />
+      <Tab icon="/logos/github.svg" filename="github" path="https://github.com/johnmath" external />
     </div>
   );
 };
