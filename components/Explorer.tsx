@@ -7,13 +7,8 @@ import styles from '@/styles/Explorer.module.css';
 
 const explorerItems = [
   {
-    name: 'home.tsx',
+    name: 'about.py',
     path: '/',
-    icon: '/logos/react_icon.svg',
-  },
-  {
-    name: 'about.html',
-    path: '/about',
     icon: '/logos/html_icon.svg',
   },
   {
