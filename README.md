@@ -17,9 +17,55 @@ A Visual Studio Code themed developer portfolio website built with Next.js and d
 
 For other features and themes suggestions, please open an issue.
 
-## Environment Variables
+## Papers System
 
-For fetching your articles from dev.to, create an `.env.local` file inside the project directory. Check the `.env.local.example` file for more information.
+The portfolio includes a papers management system for displaying academic publications with rich metadata and interactive features.
+
+### Data Files
+
+- **`data/papers.json`**: Generated data file containing papers with BibTeX entries
+- **`data/papers_overrides.json`**: Manual overrides for custom titles, venues, abstracts, links, and other metadata
+
+### Fields Supported
+
+**Base fields** (from fetch script):
+- `title`, `authors`, `venue`, `year`, `bibtex`
+
+**Override fields** (in `papers_overrides.json`):
+- `slug`: Unique identifier for the paper
+- `custom_title`: Override the display title 
+- `custom_venue`: Override the venue name
+- `abstract`: Paper abstract (collapsible)
+- `pdf_url`, `code_url`, `video_url`: Resource links
+- `doi`: DOI identifier (creates DOI badge/link)
+- `arxiv_id`: arXiv identifier (creates arXiv badge/link)  
+- `tags`: Array of topic tags (displayed as badges)
+- `notes`: Additional notes (collapsible, only shown if present)
+- `featured`: Boolean to highlight important papers
+- `custom_order`: Numeric ordering within same year
+
+### Fetch Script
+
+Run `node scripts/fetch_papers.mjs` to update papers data from Google Scholar. The script:
+- Fetches publications for user ID `3jYQ3FsAAAAJ` 
+- Merges with overrides from `papers_overrides.json`
+- Generates BibTeX entries for each paper
+- On fetch failure, preserves existing `data/papers.json` and logs warning
+
+### Display Features
+
+Papers page (`/papers`) shows:
+- **Sorting**: Year desc → custom_order desc → title asc
+- **Badges**: Venue, DOI (linkable), arXiv (linkable), tags, featured
+- **Links row**: PDF | Code | Video (when available)  
+- **BibTeX copy**: Copy to clipboard button
+- **Collapsible sections**: Abstract (default collapsed), Notes (collapsed, only if present)
+
+### Limitations
+
+- Mock Google Scholar integration (real scraping would require additional setup)
+- BibTeX generation is simplified (basic article format)
+- No direct Google Scholar API (would need third-party service or scraping)
 
 ## Running Development Server
 

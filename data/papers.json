@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Phantom: General Trigger Attacks on Retrieval Augmented Language Generation",
+    "authors": "John Abascal, Stanley Wu, Alina Oprea, Jonathan Ullman",
+    "venue": "arXiv preprint",
+    "year": 2024,
+    "slug": "phantom2024",
+    "bibtex": "@article{JohnAbascal2024,\n  title={Phantom: General Trigger Attacks on Retrieval Augmented Language Generation},\n  author={John Abascal, Stanley Wu, Alina Oprea, Jonathan Ullman},\n  journal={arXiv preprint},\n  year={2024}\n}",
+    "featured": true,
+    "custom_order": 10,
+    "abstract": "We introduce Phantom attacks, a novel class of trigger-based backdoor attacks against retrieval-augmented generation systems.",
+    "arxiv_id": "2405.20485",
+    "tags": [
+      "Machine Learning",
+      "Security",
+      "NLP"
+    ],
+    "notes": "Presented at various security workshops."
+  },
+  {
+    "title": "TMI! Finetuned Models Leak Private Information from their Pretraining Data",
+    "authors": "John Abascal, Florian Tramèr, Matthew Jagielski, Nicholas Carlini, Alina Oprea, Jonathan Ullman",
+    "venue": "PETS 2024",
+    "year": 2024,
+    "slug": "tmi2024",
+    "bibtex": "@article{JohnAbascal2024,\n  title={TMI! Finetuned Models Leak Private Information from their Pretraining Data},\n  author={John Abascal, Florian Tramèr, Matthew Jagielski, Nicholas Carlini, Alina Oprea, Jonathan Ullman},\n  journal={PETS 2024},\n  year={2024}\n}",
+    "featured": true,
+    "custom_order": 9,
+    "abstract": "We investigate privacy leakage in fine-tuned language models, showing that models leak private information from their pretraining data.",
+    "tags": [
+      "Privacy",
+      "Machine Learning",
+      "Security"
+    ],
+    "pdf_url": "https://petsymposium.org/popets/2024/popets-2024-0075.php"
+  },
+  {
+    "title": "SNAP: Efficient Extraction of Private Properties with Poisoning",
+    "authors": "John Abascal, Stanley Wu, Alina Oprea, Jonathan Ullman",
+    "venue": "IEEE S&P 2023",
+    "year": 2023,
+    "slug": "snap2023",
+    "bibtex": "@article{JohnAbascal2023,\n  title={SNAP: Efficient Extraction of Private Properties with Poisoning},\n  author={John Abascal, Stanley Wu, Alina Oprea, Jonathan Ullman},\n  journal={IEEE S&P 2023},\n  year={2023}\n}",
+    "featured": false,
+    "custom_order": 8,
+    "abstract": "We propose SNAP, a method for efficiently extracting private properties using data poisoning techniques.",
+    "tags": [
+      "Privacy",
+      "Security",
+      "Data Poisoning"
+    ],
+    "pdf_url": "https://www.computer.org/csdl/proceedings-article/sp/2023/933600b935/1OXH05XwLIc"
+  }
+]

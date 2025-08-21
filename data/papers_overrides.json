@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "phantom2024",
+    "featured": true,
+    "custom_order": 10,
+    "abstract": "We introduce Phantom attacks, a novel class of trigger-based backdoor attacks against retrieval-augmented generation systems.",
+    "arxiv_id": "2405.20485",
+    "tags": ["Machine Learning", "Security", "NLP"],
+    "notes": "Presented at various security workshops."
+  },
+  {
+    "slug": "tmi2024",
+    "featured": true,
+    "custom_order": 9,
+    "abstract": "We investigate privacy leakage in fine-tuned language models, showing that models leak private information from their pretraining data.",
+    "tags": ["Privacy", "Machine Learning", "Security"],
+    "pdf_url": "https://petsymposium.org/popets/2024/popets-2024-0075.php"
+  },
+  {
+    "slug": "snap2023",
+    "featured": false,
+    "custom_order": 8,
+    "abstract": "We propose SNAP, a method for efficiently extracting private properties using data poisoning techniques.",
+    "tags": ["Privacy", "Security", "Data Poisoning"],
+    "pdf_url": "https://www.computer.org/csdl/proceedings-article/sp/2023/933600b935/1OXH05XwLIc"
+  }
+]

@@ -12,7 +12,7 @@ const explorerItems = [
     icon: '/logos/react_icon.svg',
   },
   {
-    name: 'about.html',
+    name: 'about.py',
     path: '/about',
     icon: '/logos/html_icon.svg',
   },
@@ -27,9 +27,9 @@ const explorerItems = [
     icon: '/logos/css_icon.svg',
   },
   {
-    name: 'projects.js',
-    path: '/projects',
-    icon: '/logos/js_icon.svg',
+    name: 'papers.md',
+    path: '/papers',
+    icon: '/logos/markdown_icon.svg',
   },
   {
     name: 'articles.json',

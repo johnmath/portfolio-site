@@ -9,14 +9,6 @@ export interface Article {
   comments_count: number;
 }
 
-export interface Project {
-  title: string;
-  description: string;
-  logo: string;
-  link: string;
-  slug: string;
-}
-
 export interface Repo {
   id: number;
   name: string;
