@@ -21,21 +21,25 @@ const explorerItems = [
     path: '/contact',
     icon: '/logos/css_icon.svg',
   },
-  {
-    name: 'publications.md',
-    path: '/publications',
-    icon: '/logos/markdown_icon.svg',
-  },
-  {
-    name: 'articles.json',
-    path: '/articles',
-    icon: '/logos/json_icon.svg',
-  },
-  {
-    name: 'github.md',
-    path: '/github',
-    icon: '/logos/markdown_icon.svg',
-  },
+  // {
+  //   name: 'publications.md',
+  //   path: '/publications',
+  //   icon: '/logos/markdown_icon.svg',
+  // },
+  // {
+  //   name: 'articles.json',
+  //   path: '/articles',
+  //   icon: '/logos/json_icon.svg',
+  // },
+  // {
+  //   name: 'github.md',
+  //   path: '/github',
+  //   icon: '/logos/markdown_icon.svg',
+  // },
+  { 
+    name: 'papers.md', 
+    path: '/papers', 
+    icon: '/logos/md_icon.svg' },
 ];
 
 const Explorer = () => {
