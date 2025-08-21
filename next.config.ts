@@ -13,6 +13,15 @@ const nextConfig: NextConfig = {
       { hostname: 'media2.dev.to', protocol: 'https' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/publications',
+        destination: '/papers',
+        permanent: true
+      }
+    ]
+  }
 };
 
 export default nextConfig;
