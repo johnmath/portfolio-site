@@ -40,12 +40,11 @@
 
 .notebookCell {
   /* Use the theme's accent color for the border */
+  border: 1px solid rgba(0, 0, 0, 0.4); 
   border-left: 4px solid var(--accent-color);
   border-radius: 4px;
   /* Make the background 15% darker than the main background */
-  background: var(--main-bg);
-  border: 1px solid rgba(0, 0, 0, 0.1); 
-
+  background: rgba(0,0,0,0.15);
 /*   filter: brightness(0.85); */
 
   /* Horizontal margins have been removed to allow the cell to stretch to full width */
@@ -54,8 +53,9 @@
 
 .cellHeader {
   /* This rule was conflicting. This version will use the main background with a filter. */
-  background: var(--main-bg);
-  filter: brightness(0.85);
+  background: rgba(0, 0, 0, 0.4); 
+;
+/*   filter: brightness(0.85); */
   
   padding: 0.5rem 1rem;
   font-size: 12px;
@@ -82,7 +82,6 @@
   background: transparent;
   /* Use the theme's accent color for the border */
   border: 1px solid rgba(0, 0, 0, 0.4); 
-  filter: brightness(1.2);
   border-radius: 4px;
   margin: 0.5rem 0 0 0;
   padding: 1rem;
