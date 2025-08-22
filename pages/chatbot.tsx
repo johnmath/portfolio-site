@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
+import styles from '@/styles/Chatbot.module.css';
 // import { useRouter } from 'next/router';
 
 const Chatbot = () => {
