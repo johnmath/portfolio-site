@@ -1,8 +1,6 @@
-// import { useEffect } from 'react';
-// import Chatbot from '@/components/Chatbot';
+import Chatbot from '@/components/Chatbot';
 
 import styles from '@/styles/Chatbot.module.css';
-// import { useRouter } from 'next/router';
 
 const ChatbotPage = () => {
   // Show loading state while redirecting
