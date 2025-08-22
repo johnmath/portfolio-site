@@ -1,13 +1,9 @@
 .container {
   max-width: 100vw;
   height: 100vh;
-/*   margin: 0; */
-/*   margin-top: 1rem; */
-  padding-top: 1rem; 
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding: 0;
+  /* Removed conflicting margin and padding rules */
+  margin: 0;
+  padding: 1rem 0 0 0;
   color: var(--text-color);
   font-family: 'Menlo', monospace;
 }
@@ -25,39 +21,35 @@
   min-width: 0;
   background: var(--main-bg);
   overflow-y: auto;
-  padding: 1rem 1rem 1rem 0.5rem; /* We can adjust this padding later */
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Menlo', monospace;
-
-  /* Add these two lines to use Flexbox spacing */
+  /* Replaced horizontal padding with horizontal margin on cells. */
+  padding: 1rem 0;
+  
+  /* Use flexbox to handle consistent vertical spacing between cells. */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: 'Menlo', monospace;
 }
 
 .notebookCell {
-  border-left: 4px solid #1976d2;
-  /* Remove this line */
-  /* margin-bottom: 1.5rem; */
+  /* Use the theme's accent color for the border */
+  border-left: 4px solid var(--accent-color);
+  /* The vertical spacing is now handled by the parent's `gap` */
+  margin: 0 1rem;
+  /* Hardcoded RGBA values are okay, but could be replaced with `rgba(var(--accent-color-rgb), 0.05);` if you want to theme them fully. */
   background: rgba(25, 118, 210, 0.05);
   border-radius: 4px;
 }
 
-.cellOutput {
-  background: transparent;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  margin: 0.5rem 0 0 0; /* <-- This already looks fine */
-  padding: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
 .cellHeader {
+  /* Use theme variables for color consistency */
   background: rgba(25, 118, 210, 0.1);
   padding: 0.5rem 1rem;
   font-size: 12px;
-  color: #1976d2;
+  color: var(--accent-color);
   border-bottom: 1px solid rgba(25, 118, 210, 0.2);
   font-weight: 500;
 }
@@ -76,14 +68,16 @@
 }
 
 /* Cell outputs */
-/* .cellOutput {
-  background: #fff;
-  border: 1px solid #e0e0e0;
+.cellOutput {
+  background: transparent;
+  /* Use the theme's accent color for the border */
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
-  margin: 0.5rem 1rem 0 1rem;
+  /* The horizontal margin from `.notebookCell` is now consistent. */
+  margin: 0.5rem 0 0 0;
   padding: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-} */
+}
 
 .imageContainer {
   margin: 0;
@@ -97,21 +91,24 @@
   border-radius: 8px;
   object-fit: cover;
   object-position: center center;
-  border: 2px solid #1976d2;
+  /* Use the theme's accent color for the border */
+  border: 2px solid var(--accent-color);
   width: 200px;
   height: 200px;
   display: block;
 }
 
 .printOutput {
-  color: #333;
+  /* Use the theme's text color */
+  color: var(--text-color);
   font-family: 'Menlo', monospace;
   font-size: 13px;
 }
 
 .outputLine {
   margin-bottom: 0.25rem;
-  color: #333;
+  /* Use the theme's text color */
+  color: var(--text-color);
 }
 
 .outputLine:last-child {
@@ -157,18 +154,6 @@
   text-decoration-color: #79b8f0;
 }
 
-.string a {
-  color: #569cd6;
-  text-decoration: underline;
-  text-decoration-color: rgba(86, 156, 214, 0.5);
-  transition: all 0.2s ease;
-}
-
-.string a:hover {
-  color: #79b8f0;
-  text-decoration-color: #79b8f0;
-}
-
 /* Responsive design */
 @media screen and (max-width: 768px) {
   .notebook {
@@ -177,6 +162,7 @@
   }
   
   .notebookCell {
+    margin: 0 0.75rem;
     margin-bottom: 1rem;
   }
   
@@ -212,6 +198,7 @@
   }
   
   .notebookCell {
+    margin: 0 0.5rem;
     margin-bottom: 0.8rem;
   }
   
