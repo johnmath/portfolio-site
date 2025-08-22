@@ -9,7 +9,7 @@ const ChatbotPage = () => {
   return (
     <div className={styles.layout}>
       <div className={styles.container}>
-        <Chatabot />
+        <Chatbot />
       </div>
     </div>
   );
