@@ -94,9 +94,10 @@
 }
 
 .profileImage {
-  border-radius: 8px;
+  border-radius: 10px;
   object-fit: cover;
   object-position: center center;
+  filter: brightness(1.1);
   /* Use the theme's accent color for the border */
   border: 2px solid var(--accent-color);
   width: 200px;
