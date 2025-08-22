@@ -7,34 +7,28 @@
   font-family: 'Menlo', monospace;
 }
 
-.editorLayout {
+.notebookLayout {
   display: flex;
   height: 100%;
   max-height: 100vh;
   overflow: hidden;
 }
 
-/* Left side - Code section */
-.codeSection {
+/* Single column notebook layout */
+.notebook {
   flex: 1;
   min-width: 0;
   background: var(--main-bg);
   overflow-y: auto;
-  border-right: 1px solid var(--explorer-border);
-}
-
-.code {
-  counter-reset: line;
+  padding: 1rem 1rem 1rem 0.5rem;
   font-size: 14px;
   line-height: 1.5;
-  padding: 16px 0 16px 16px;
-  height: 100%;
   font-family: 'Menlo', monospace;
 }
 
 .notebookCell {
   border-left: 4px solid #1976d2;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: rgba(25, 118, 210, 0.05);
   border-radius: 4px;
 }
@@ -49,38 +43,59 @@
 }
 
 .cellContent {
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
 }
 
 .line {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 1rem;
   padding-right: 1rem;
   white-space: pre-wrap;
   word-wrap: break-word;
   min-height: 21px;
 }
 
-.notebookCell .line {
-  padding-left: 1rem;
+/* Cell outputs */
+.cellOutput {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin: 0.5rem 1rem 0 1rem;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.notebookCell .line::before {
-  display: none;
+.imageContainer {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.line::before {
-  content: counter(line);
-  counter-increment: line;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1.5rem;
-  text-align: right;
-  color: #636e83;
+.profileImage {
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center center;
+  border: 2px solid #1976d2;
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.printOutput {
+  color: #333;
+  font-family: 'Menlo', monospace;
   font-size: 13px;
-  user-select: none;
-  padding-right: 0.5rem;
+}
+
+.outputLine {
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.outputLine:last-child {
+  margin-bottom: 0;
 }
 
 /* Python syntax highlighting */
@@ -122,168 +137,27 @@
   text-decoration-color: #79b8f0;
 }
 
-/* Right side - Profile section */
-.profileSection {
-  flex: 0 0 400px;
-  background: var(--article-bg);
-  padding: 2rem;
-  overflow-y: auto;
-  border-left: 1px solid var(--explorer-border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.imageContainer {
-  margin: 0 0 1.5rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 160px;
-}
-
-.profileImage {
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center center;
-  border: 3px solid var(--accent-color);
-  width: 160px;
-  height: 160px;
-  display: block;
-}
-
-.profileInfo {
-  text-align: center;
-  width: 100%;
-}
-
-.name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--accent-color);
-  letter-spacing: -0.02em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.title {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-  line-height: 1.4;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.location {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.bioContent {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.bioParagraph {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  font-size: 0.95rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.bioParagraph:last-child {
-  margin-bottom: 0;
-}
-
-.researchSection {
-  text-align: left;
-  width: 100%;
-}
-
-.sectionTitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--accent-color);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.interestsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.interestItem {
-  position: relative;
-  padding-left: 1.25rem;
-  margin-bottom: 0.4rem;
-  line-height: 1.5;
-  color: var(--text-color);
-  font-size: 0.9rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.interestItem::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
-.interestItem:last-child {
-  margin-bottom: 0;
-}
-
-.link {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.link:hover {
-  color: rgba(var(--accent-color-rgb), 0.8);
+.string a {
+  color: #569cd6;
   text-decoration: underline;
+  text-decoration-color: rgba(86, 156, 214, 0.5);
+  transition: all 0.2s ease;
+}
+
+.string a:hover {
+  color: #79b8f0;
+  text-decoration-color: #79b8f0;
 }
 
 /* Responsive design */
 @media screen and (max-width: 768px) {
-  .editorLayout {
-    flex-direction: column;
-  }
-  
-  .codeSection {
-    flex: 1;
-    border-right: none;
-    border-bottom: 1px solid var(--explorer-border);
-    max-height: 60vh;
-  }
-  
-  .profileSection {
-    flex: 0 0 auto;
-    padding: 1.5rem 1rem;
-    border-left: none;
-    border-top: 1px solid var(--explorer-border);
-  }
-  
-  .profileImage {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .imageContainer {
-    width: 120px;
-    height: 120px;
+  .notebook {
+    padding: 0.75rem 0.5rem 0.75rem 0.25rem;
+    font-size: 13px;
   }
   
   .notebookCell {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
   }
   
   .cellHeader {
@@ -291,53 +165,34 @@
     font-size: 11px;
   }
   
-  .name {
-    font-size: 1.5rem;
-  }
-  
-  .title {
-    font-size: 0.95rem;
-  }
-  
-  .location {
-    font-size: 0.85rem;
-  }
-  
-  .bioParagraph {
-    font-size: 0.9rem;
+  .cellContent {
+    padding: 0.5rem 0;
   }
   
   .line {
-    padding-left: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   
-  .line::before {
-    width: 1.5rem;
+  .cellOutput {
+    margin: 0.5rem 0.75rem 0 0.75rem;
+    padding: 0.75rem;
   }
   
-  .code {
-    font-size: 13px;
-    padding: 12px 0 12px 12px;
+  .profileImage {
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .profileSection {
-    padding: 1rem 0.5rem;
-  }
-  
-  .profileImage {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .imageContainer {
-    width: 100px;
-    height: 100px;
+  .notebook {
+    padding: 0.5rem 0.25rem 0.5rem 0.1rem;
+    font-size: 12px;
   }
   
   .notebookCell {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
   }
   
   .cellHeader {
@@ -345,20 +200,22 @@
     font-size: 10px;
   }
   
-  .name {
-    font-size: 1.3rem;
-  }
-  
-  .code {
-    font-size: 12px;
-  }
-  
   .line {
-    padding-left: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   
-  .line::before {
-    width: 1rem;
-    font-size: 11px;
+  .cellOutput {
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .profileImage {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .printOutput {
+    font-size: 12px;
   }
 }
