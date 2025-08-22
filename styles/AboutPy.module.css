@@ -77,7 +77,8 @@
 .cellOutput {
   background: transparent;
   /* Use the theme's accent color for the border */
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--main-bg);
+  filter: brightness(1.2);
   border-radius: 4px;
   margin: 0.5rem 0 0 0;
   padding: 1rem;
@@ -87,7 +88,7 @@
 .imageContainer {
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: 100%;
 }
