@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import styles from '@/styles/Chatbot.module.css';
 
 // Research interests as exportable array for easy editing
