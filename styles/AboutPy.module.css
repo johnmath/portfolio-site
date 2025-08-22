@@ -3,7 +3,7 @@
   height: 100vh;
   /* Removed conflicting margin and padding rules */
 /*   margin: 0; */
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding: 1rem 0 0 0;
   color: var(--text-color);
   font-family: 'Menlo', monospace;
@@ -41,17 +41,21 @@
   /* The vertical spacing is now handled by the parent's `gap` */
   margin: 0 1rem;
   /* Hardcoded RGBA values are okay, but could be replaced with `rgba(var(--accent-color-rgb), 0.05);` if you want to theme them fully. */
-  background: rgba(25, 118, 210, 0.05);
+  background: rgba(var(--main-bg), 0.05);
+/*   background: var(--main-bg); */
+/*   filter: brightness(0.9); */
   border-radius: 4px;
 }
 
 .cellHeader {
   /* Use theme variables for color consistency */
-  background: rgba(25, 118, 210, 0.1);
+  background: rgba(var(--main-bg), 0.1);
+  background: var(--main-bg);
+  filter: brightness(0.8)
   padding: 0.5rem 1rem;
   font-size: 12px;
   color: var(--accent-color);
-  border-bottom: 1px solid rgba(25, 118, 210, 0.2);
+  border-bottom: 1px solid rgba(var(--main-bg), 0.2);
   font-weight: 500;
 }
 
