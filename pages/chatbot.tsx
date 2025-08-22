@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
-// import { useRouter } from 'next/router';
+import Chatbot from '@/components/Chatbot';
 
-const Chatbot = () => {
+import styles from '@/styles/Chatbot.module.css';
+
+const ChatbotPage = () => {
   // Show loading state while redirecting
   return (
     <div className={styles.layout}>
       <div className={styles.container}>
+        <Chatbot />
       </div>
     </div>
   );
@@ -17,4 +19,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Chatbot;
+export default ChatbotPage;
