@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 const Chatbot = () => {
   // Show loading state while redirecting
   return (
-    <div/>
+    <div>
 
     </div>
   );
