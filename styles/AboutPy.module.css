@@ -1,8 +1,9 @@
 .container {
   max-width: 100vw;
-  height: 100vh;
+/*   height: 100vh; */
   margin: 0;
   margin-top: 5rem;
+  height: calc(100vh - 5rem);
   padding: 0;
   color: var(--text-color);
   font-family: 'Menlo', monospace;
@@ -22,12 +23,14 @@
   background: var(--main-bg);
   overflow-y: auto;
   
-  /* Use Flexbox for consistent spacing between cells. */
+  /* Use Flexbox for consistent vertical spacing between cells. */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   
-  /* Add consistent padding to the notebook itself. */
+  /* This is the key change: 
+     The parent provides padding on all four sides. 
+     This creates the consistent horizontal "gutters" on the left and right. */
   padding: 1rem;
   
   font-size: 14px;
@@ -39,10 +42,11 @@
   /* Use the theme's accent color for the border */
   border-left: 4px solid var(--accent-color);
   border-radius: 4px;
-
   /* Make the background 15% darker than the main background */
   background: var(--main-bg);
-  filter: brightness(0.85);
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+
+/*   filter: brightness(0.85); */
 
   /* Horizontal margins have been removed to allow the cell to stretch to full width */
   margin: 0;
