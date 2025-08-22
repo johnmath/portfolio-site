@@ -34,7 +34,7 @@
 
 .line {
   position: relative;
-  padding-left: 3rem;
+  padding-left: 2rem;
   padding-right: 1rem;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -47,12 +47,12 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 2.5rem;
+  width: 1.5rem;
   text-align: right;
   color: #636e83;
   font-size: 13px;
   user-select: none;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 /* Python syntax highlighting */
@@ -112,7 +112,7 @@
 
 .profileImage {
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   border: 3px solid var(--accent-color);
   width: 160px;
   height: 160px;
@@ -259,11 +259,11 @@
   }
   
   .line {
-    padding-left: 2.5rem;
+    padding-left: 2rem;
   }
   
   .line::before {
-    width: 2rem;
+    width: 1.5rem;
   }
   
   .code {
@@ -291,11 +291,11 @@
   }
   
   .line {
-    padding-left: 2rem;
+    padding-left: 1.5rem;
   }
   
   .line::before {
-    width: 1.5rem;
+    width: 1rem;
     font-size: 11px;
   }
 }

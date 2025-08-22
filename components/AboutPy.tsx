@@ -149,39 +149,6 @@ const AboutPy = () => {
             <h1 className={styles.name}>John Abascal</h1>
             <p className={styles.title}>Computer Science PhD Student at Northeastern University</p>
             <p className={styles.location}>177 Huntington<br />Boston, MA 02115</p>
-            
-            <div className={styles.bioContent}>
-              <div className={styles.bioParagraph}>
-                I am a fourth-year Computer Science PhD Student at Northeastern University, where I am 
-                advised by <a href="https://www.ccs.neu.edu/home/jullman/" target="_blank" rel="noopener noreferrer" className={styles.link}>Jonathan Ullman</a> and{' '}
-                <a href="https://www.ccs.neu.edu/home/alina/" target="_blank" rel="noopener noreferrer" className={styles.link}>Alina Oprea</a>. 
-                I completed my B.S. in Pure Mathematics at Florida State University and conducted my 
-                undergraduate honors thesis under the guidance of{' '}
-                <a href="https://www.math.fsu.edu/~kercheva/" target="_blank" rel="noopener noreferrer" className={styles.link}>Alec Kercheval</a> and{' '}
-                <a href="https://www.sc.fsu.edu/people?uid=ndc08" target="_blank" rel="noopener noreferrer" className={styles.link}>Nathan Crock</a>.
-              </div>
-              
-              <div className={styles.bioParagraph}>
-                I have also held industry positions in both software engineering and data science at{' '}
-                <a href="https://www.intuit.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>Intuit</a> and{' '}
-                <a href="https://labs.newsci.ai/" target="_blank" rel="noopener noreferrer" className={styles.link}>NewSci Labs</a>, 
-                respectively. During the summers of 2023 and 2024, I was an Applied Research Intern on{' '}
-                <a href="https://about.linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn&apos;s</a> Data Privacy team, 
-                where I worked on empirically measuring privacy leakage in analytics and LLMs. This semester, 
-                I am a Student Researcher at{' '}
-                <a href="https://about.google/" target="_blank" rel="noopener noreferrer" className={styles.link}>Google</a>, 
-                exploring open problems in machine unlearning 🔒
-              </div>
-            </div>
-
-            <div className={styles.researchSection}>
-              <h2 className={styles.sectionTitle}>Research Interests</h2>
-              <ul className={styles.interestsList}>
-                {researchInterests.map((interest, index) => (
-                  <li key={index} className={styles.interestItem}>{interest}</li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
