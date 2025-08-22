@@ -40,7 +40,7 @@
 
 .notebookCell {
   /* Use the theme's accent color for the border */
-  border: 1px solid rgba(0, 0, 0, 0.4); 
+  border: 4px solid rgba(0, 0, 0, 0.4); 
   border-left: 4px solid var(--accent-color);
   border-radius: 4px;
   /* Make the background 15% darker than the main background */
@@ -79,9 +79,8 @@
 
 /* Cell outputs */
 .cellOutput {
-  background: transparent;
-  /* Use the theme's accent color for the border */
-  border: 1px solid rgba(0, 0, 0, 0.4); 
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.4); 
   border-radius: 4px;
   margin: 0.5rem 0 0 0;
   padding: 1rem;
@@ -101,7 +100,7 @@
   object-fit: cover;
   object-position: center center;
   /* Use the theme's bg color darkened for the border */
-  border: 2px solid rgba(0, 0, 0, 0.4); 
+  border: 4px solid rgba(0, 0, 0, 0.4); 
   width: 200px;
   height: 200px;
   display: block;
