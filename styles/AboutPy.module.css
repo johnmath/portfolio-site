@@ -25,16 +25,21 @@
   min-width: 0;
   background: var(--main-bg);
   overflow-y: auto;
-  /* Remove horizontal padding from the notebook */
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 1rem 1rem 0.5rem; /* We can adjust this padding later */
   font-size: 14px;
   line-height: 1.5;
   font-family: 'Menlo', monospace;
+
+  /* Add these two lines to use Flexbox spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .notebookCell {
   border-left: 4px solid #1976d2;
-  margin: 0 1rem 1.5rem 1rem; /* <-- Add a horizontal margin to the cell */
+  /* Remove this line */
+  /* margin-bottom: 1.5rem; */
   background: rgba(25, 118, 210, 0.05);
   border-radius: 4px;
 }
