@@ -2,13 +2,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const Chatbot = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    // Redirect to home page since about content is now at root
-    router.replace('/');
-  }, [router]);
-
   // Show loading state while redirecting
   return (
     <div style={{ 
