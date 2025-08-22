@@ -17,7 +17,7 @@ const AboutPy = () => {
         <div className={styles.codeSection}>
           <div className={styles.code}>
             <div className={styles.line}>
-              <span className={styles.comment}># about.py - John Abascal's Profile Script</span>
+              <span className={styles.comment}># about.py - John Abascal&apos;s Profile Script</span>
             </div>
             <div className={styles.line}>
               <span className={styles.keyword}>from</span> <span className={styles.module}>PIL</span> <span className={styles.keyword}>import</span> <span className={styles.function}>Image</span>
@@ -30,64 +30,64 @@ const AboutPy = () => {
               <span className={styles.comment}># Personal information</span>
             </div>
             <div className={styles.line}>
-              <span className={styles.variable}>name</span> = <span className={styles.string}>"John Abascal"</span>
+              <span className={styles.variable}>name</span> = <span className={styles.string}>&quot;John Abascal&quot;</span>
             </div>
             <div className={styles.line}>
-              <span className={styles.variable}>title</span> = <span className={styles.string}>"Computer Science PhD Student at Northeastern University"</span>
+              <span className={styles.variable}>title</span> = <span className={styles.string}>&quot;Computer Science PhD Student at Northeastern University&quot;</span>
             </div>
             <div className={styles.line}>
-              <span className={styles.variable}>location</span> = <span className={styles.string}>"177 Huntington, Boston, MA 02115"</span>
+              <span className={styles.variable}>location</span> = <span className={styles.string}>&quot;177 Huntington, Boston, MA 02115&quot;</span>
             </div>
             <div className={styles.line}></div>
             <div className={styles.line}>
               <span className={styles.comment}># Load profile image</span>
             </div>
             <div className={styles.line}>
-              <span className={styles.variable}>profile_img</span> = <span className={styles.module}>Image</span>.<span className={styles.function}>open</span>(<span className={styles.string}>"/me.png"</span>)
+              <span className={styles.variable}>profile_img</span> = <span className={styles.module}>Image</span>.<span className={styles.function}>open</span>(<span className={styles.string}>&quot;/me.png&quot;</span>)
             </div>
             <div className={styles.line}></div>
             <div className={styles.line}>
               <span className={styles.comment}># Biography</span>
             </div>
             <div className={styles.line}>
-              <span className={styles.variable}>bio</span> = <span className={styles.string}>"I am a fourth-year Computer Science PhD Student at "</span> + \
+              <span className={styles.variable}>bio</span> = <span className={styles.string}>&quot;I am a fourth-year Computer Science PhD Student at &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"Northeastern University, where I am advised by "</span> + \
+              <span className={styles.string}>&quot;Northeastern University, where I am advised by &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"<a href="https://www.ccs.neu.edu/home/jullman/" target="_blank" rel="noopener noreferrer" className={styles.link}>Jonathan Ullman</a> and <a href="https://www.ccs.neu.edu/home/alina/" target="_blank" rel="noopener noreferrer" className={styles.link}>Alina Oprea</a>. "</span> + \
+              <span className={styles.string}>&quot;<a href="https://www.ccs.neu.edu/home/jullman/" target="_blank" rel="noopener noreferrer" className={styles.link}>Jonathan Ullman</a> and <a href="https://www.ccs.neu.edu/home/alina/" target="_blank" rel="noopener noreferrer" className={styles.link}>Alina Oprea</a>. &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"I completed my B.S. in Pure Mathematics at Florida State University "</span> + \
+              <span className={styles.string}>&quot;I completed my B.S. in Pure Mathematics at Florida State University &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"and conducted my undergraduate honors thesis under the guidance of "</span> + \
+              <span className={styles.string}>&quot;and conducted my undergraduate honors thesis under the guidance of &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"<a href="https://www.math.fsu.edu/~kercheva/" target="_blank" rel="noopener noreferrer" className={styles.link}>Alec Kercheval</a> and <a href="https://www.sc.fsu.edu/people?uid=ndc08" target="_blank" rel="noopener noreferrer" className={styles.link}>Nathan Crock</a>."</span>
+              <span className={styles.string}>&quot;<a href="https://www.math.fsu.edu/~kercheva/" target="_blank" rel="noopener noreferrer" className={styles.link}>Alec Kercheval</a> and <a href="https://www.sc.fsu.edu/people?uid=ndc08" target="_blank" rel="noopener noreferrer" className={styles.link}>Nathan Crock</a>.&quot;</span>
             </div>
             <div className={styles.line}></div>
             <div className={styles.line}>
-              <span className={styles.variable}>experience</span> = <span className={styles.string}>"I have also held industry positions in both software "</span> + \
+              <span className={styles.variable}>experience</span> = <span className={styles.string}>&quot;I have also held industry positions in both software &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"engineering and data science at <a href="https://www.intuit.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>Intuit</a> and "</span> + \
+              <span className={styles.string}>&quot;engineering and data science at <a href="https://www.intuit.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>Intuit</a> and &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"<a href="https://labs.newsci.ai/" target="_blank" rel="noopener noreferrer" className={styles.link}>NewSci Labs</a>, respectively. During the summers of 2023 and 2024, "</span> + \
+              <span className={styles.string}>&quot;<a href="https://labs.newsci.ai/" target="_blank" rel="noopener noreferrer" className={styles.link}>NewSci Labs</a>, respectively. During the summers of 2023 and 2024, &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"I was an Applied Research Intern on <a href="https://about.linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn's</a> Data Privacy "</span> + \
+              <span className={styles.string}>&quot;I was an Applied Research Intern on <a href="https://about.linkedin.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn&apos;s</a> Data Privacy &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"team, where I worked on empirically measuring privacy leakage in "</span> + \
+              <span className={styles.string}>&quot;team, where I worked on empirically measuring privacy leakage in &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"analytics and LLMs. This semester, I am a Student Researcher at "</span> + \
+              <span className={styles.string}>&quot;analytics and LLMs. This semester, I am a Student Researcher at &quot;</span> + \
             </div>
             <div className={styles.line}>
-              <span className={styles.string}>"<a href="https://about.google/" target="_blank" rel="noopener noreferrer" className={styles.link}>Google</a>, exploring open problems in machine unlearning 🔒"</span>
+              <span className={styles.string}>&quot;<a href="https://about.google/" target="_blank" rel="noopener noreferrer" className={styles.link}>Google</a>, exploring open problems in machine unlearning 🔒&quot;</span>
             </div>
             <div className={styles.line}></div>
             <div className={styles.line}>
@@ -97,16 +97,16 @@ const AboutPy = () => {
               <span className={styles.variable}>research_interests</span> = [
             </div>
             <div className={styles.line}>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>"Privacy in Machine Learning"</span>,
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>&quot;Privacy in Machine Learning&quot;</span>,
             </div>
             <div className={styles.line}>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>"Adversarial Machine Learning"</span>,
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>&quot;Adversarial Machine Learning&quot;</span>,
             </div>
             <div className={styles.line}>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>"Differential Privacy"</span>,
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>&quot;Differential Privacy&quot;</span>,
             </div>
             <div className={styles.line}>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>"LLM Security and Safety"</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.string}>&quot;LLM Security and Safety&quot;</span>
             </div>
             <div className={styles.line}>
               ]
@@ -128,7 +128,7 @@ const AboutPy = () => {
               <span className={styles.function}>print</span>(<span className={styles.variable}>experience</span>)
             </div>
             <div className={styles.line}>
-              <span className={styles.function}>print</span>(<span className={styles.string}>"Research Interests:"</span>, <span className={styles.variable}>research_interests</span>)
+              <span className={styles.function}>print</span>(<span className={styles.string}>&quot;Research Interests:&quot;</span>, <span className={styles.variable}>research_interests</span>)
             </div>
           </div>
         </div>
