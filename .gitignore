@@ -38,3 +38,4 @@ yarn-error.log*
 
 # auto-generated publications data
 /data/publications.json
+*.png
