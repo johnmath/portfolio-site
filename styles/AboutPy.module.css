@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   color: var(--text-color);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Menlo', monospace;
 }
 
 .editorLayout {
@@ -29,7 +29,27 @@
   line-height: 1.5;
   padding: 16px 0 16px 16px;
   height: 100%;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Menlo', monospace;
+}
+
+.notebookCell {
+  border-left: 4px solid #1976d2;
+  margin-bottom: 1rem;
+  background: rgba(25, 118, 210, 0.05);
+  border-radius: 4px;
+}
+
+.cellHeader {
+  background: rgba(25, 118, 210, 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+  color: #1976d2;
+  border-bottom: 1px solid rgba(25, 118, 210, 0.2);
+  font-weight: 500;
+}
+
+.cellContent {
+  padding: 0.5rem 0;
 }
 
 .line {
@@ -39,6 +59,14 @@
   white-space: pre-wrap;
   word-wrap: break-word;
   min-height: 21px;
+}
+
+.notebookCell .line {
+  padding-left: 1rem;
+}
+
+.notebookCell .line::before {
+  display: none;
 }
 
 .line::before {
@@ -108,14 +136,21 @@
 
 .imageContainer {
   margin: 0 0 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
 }
 
 .profileImage {
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center center;
   border: 3px solid var(--accent-color);
   width: 160px;
   height: 160px;
+  display: block;
 }
 
 .profileInfo {
@@ -242,6 +277,20 @@
     height: 120px;
   }
   
+  .imageContainer {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .notebookCell {
+    margin-bottom: 0.8rem;
+  }
+  
+  .cellHeader {
+    padding: 0.4rem 0.8rem;
+    font-size: 11px;
+  }
+  
   .name {
     font-size: 1.5rem;
   }
@@ -280,6 +329,20 @@
   .profileImage {
     width: 100px;
     height: 100px;
+  }
+  
+  .imageContainer {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .notebookCell {
+    margin-bottom: 0.6rem;
+  }
+  
+  .cellHeader {
+    padding: 0.3rem 0.6rem;
+    font-size: 10px;
   }
   
   .name {
