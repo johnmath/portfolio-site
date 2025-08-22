@@ -7,10 +7,10 @@ import {
   VscGithubAlt,
   VscBook,
   VscFiles,
+  VscSparkle,
 } from 'react-icons/vsc';
 
 import { PiLinkedinLogo } from "react-icons/pi";
-import { IoSparklesOutline } from "react-icons/io5";
 
 
 import styles from '@/styles/Sidebar.module.css';
@@ -21,7 +21,7 @@ const sidebarTopItems = [
   { Icon: VscMail, path: '/contact' },
   { Icon: VscGithubAlt, path: '/github' },
   { Icon: PiLinkedinLogo, path: '/linkedin' },
-  { Icon: IoSparklesOutline, path: '/chatbot' },
+  { Icon: VscSparkle, path: '/chatbot' },
 ];
 
 const sidebarBottomItems = [
