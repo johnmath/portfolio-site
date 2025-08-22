@@ -1,74 +1,181 @@
 .container {
-  max-width: 900px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   color: var(--text-color);
+  font-family: 'JetBrains Mono', monospace;
 }
 
-.content {
+.editorLayout {
+  display: flex;
+  height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* Left side - Code section */
+.codeSection {
+  flex: 1;
+  min-width: 0;
+  background: var(--main-bg);
+  overflow-y: auto;
+  border-right: 1px solid var(--explorer-border);
+}
+
+.code {
+  counter-reset: line;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 16px 0 16px 16px;
+  height: 100%;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.line {
+  position: relative;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 21px;
+}
+
+.line::before {
+  content: counter(line);
+  counter-increment: line;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  text-align: right;
+  color: #636e83;
+  font-size: 13px;
+  user-select: none;
+  padding-right: 1rem;
+}
+
+/* Python syntax highlighting */
+.keyword {
+  color: #c586c0;
+  font-weight: 500;
+}
+
+.module {
+  color: #4ec9b0;
+}
+
+.function {
+  color: #dcdcaa;
+}
+
+.variable {
+  color: #9cdcfe;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.string a {
+  color: #569cd6;
+  text-decoration: underline;
+  text-decoration-color: rgba(86, 156, 214, 0.5);
+  transition: all 0.2s ease;
+}
+
+.string a:hover {
+  color: #79b8f0;
+  text-decoration-color: #79b8f0;
+}
+
+/* Right side - Profile section */
+.profileSection {
+  flex: 0 0 400px;
+  background: var(--article-bg);
+  padding: 2rem;
+  overflow-y: auto;
+  border-left: 1px solid var(--explorer-border);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.profileSection {
-  margin-bottom: 2rem;
+.imageContainer {
+  margin: 0 0 1.5rem 0;
 }
 
 .profileImage {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent-color);
+  width: 160px;
+  height: 160px;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--accent-color);
-  letter-spacing: -0.03em;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
+.profileInfo {
   text-align: center;
-}
-
-.aboutContent {
   width: 100%;
 }
 
-.bioSection {
-  margin-bottom: 2.5rem;
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  letter-spacing: -0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.title {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bioContent {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.bioParagraph {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bioParagraph:last-child {
+  margin-bottom: 0;
 }
 
 .researchSection {
-  margin-bottom: 2.5rem;
-}
-
-.contactSection {
-  margin-bottom: 0;
+  text-align: left;
+  width: 100%;
 }
 
 .sectionTitle {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--accent-color);
-}
-
-.paragraph {
-  margin-bottom: 1.25rem;
-  line-height: 1.7;
-  color: var(--text-color);
-  font-size: 1rem;
-}
-
-.paragraph:last-child {
-  margin-bottom: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .interestsList {
@@ -79,11 +186,12 @@
 
 .interestItem {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
+  padding-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .interestItem::before {
@@ -109,49 +217,85 @@
   text-decoration: underline;
 }
 
-.contact {
-  margin-top: 2rem;
-}
-
-.address {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 /* Responsive design */
-@media screen and (max-width: 600px) {
-  .container {
-    padding: 2rem 1rem;
+@media screen and (max-width: 768px) {
+  .editorLayout {
+    flex-direction: column;
   }
-
+  
+  .codeSection {
+    flex: 1;
+    border-right: none;
+    border-bottom: 1px solid var(--explorer-border);
+    max-height: 60vh;
+  }
+  
+  .profileSection {
+    flex: 0 0 auto;
+    padding: 1.5rem 1rem;
+    border-left: none;
+    border-top: 1px solid var(--explorer-border);
+  }
+  
   .profileImage {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
-
+  
+  .name {
+    font-size: 1.5rem;
+  }
+  
   .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .sectionTitle {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .paragraph {
     font-size: 0.95rem;
-    line-height: 1.65;
   }
+  
+  .location {
+    font-size: 0.85rem;
+  }
+  
+  .bioParagraph {
+    font-size: 0.9rem;
+  }
+  
+  .line {
+    padding-left: 2.5rem;
+  }
+  
+  .line::before {
+    width: 2rem;
+  }
+  
+  .code {
+    font-size: 13px;
+    padding: 12px 0 12px 12px;
+  }
+}
 
-  .interestItem {
-    font-size: 0.95rem;
+@media screen and (max-width: 480px) {
+  .profileSection {
+    padding: 1rem 0.5rem;
+  }
+  
+  .profileImage {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .name {
+    font-size: 1.3rem;
+  }
+  
+  .code {
+    font-size: 12px;
+  }
+  
+  .line {
+    padding-left: 2rem;
+  }
+  
+  .line::before {
+    width: 1.5rem;
+    font-size: 11px;
   }
 }
